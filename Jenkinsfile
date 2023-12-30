@@ -17,6 +17,10 @@ pipeline {
 					bat(script: 'docker compose up -d')
 				}
 			}
+		stage('Check pytest version'){
+			steps{
+					bat(script: 'pytest --version')
+				}
 		stage('Run Tests'){
 			steps{
 					bat(script: 'pytest ./tests/test_sample.py')
