@@ -33,7 +33,7 @@ pipeline {
 		}
 		post {
 			always {
-				bash(script: docker compose down)
+				bash(script: 'docker compose down')
 			}
 		}
 	}
