@@ -9,17 +9,17 @@ pipeline {
 			}
 		stage('Docker Build'){
 			steps{
-					bash(script: 'docker compose build')
+					bat(script: 'docker compose build')
 				}
 			}
 		stage('Start App'){
 			steps{
-					bash(script: 'docker compose up -d')
+					bat(script: 'docker compose up -d')
 				}
 			}
 		stage('Run Tests'){
 			steps{
-					bash(script: 'pytest ./tests/test_sample.py')
+					bat(script: 'pytest ./tests/test_sample.py')
 				}
 			post {
 				success {
@@ -33,7 +33,7 @@ pipeline {
 		}
 		post {
 			always {
-				bash(script: 'docker compose down')
+				bat(script: 'docker compose down')
 			}
 		}
 	}
