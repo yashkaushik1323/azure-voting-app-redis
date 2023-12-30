@@ -21,6 +21,7 @@ pipeline {
 			steps{
 					bat(script: 'pytest --version')
 				}
+			}
 		stage('Run Tests'){
 			steps{
 					bat(script: 'pytest ./tests/test_sample.py')
