@@ -19,7 +19,7 @@ pipeline {
 			}
 		stage('Check python version'){
 			steps{
-					bat(script: 'C:\Users\kaush\AppData\Local\Programs\Python\Python312\Scripts\python.exe python -V')
+					bat(script: '"C:\Users\kaush\AppData\Local\Programs\Python\Python312\Scripts\python.exe" python -V')
 				}
 			}
 		stage('Run Tests'){
